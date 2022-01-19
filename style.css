@@ -112,12 +112,14 @@ body{
       display: flex;
       justify-content: right;
   }
-  textarea, button{
-      font-size: xx-large;
+  input{
+      font-size: x-large;
   }
   button{
+      padding: 5px;
       margin-top: 25px;
       color: white;
       background: black;
       cursor: pointer;
+      font-size: xx-large;
   }

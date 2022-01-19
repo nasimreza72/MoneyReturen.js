@@ -22,66 +22,22 @@ function moneyReturner(purchased, paid) {
     }
     return final;
 }
-//console.log(moneyReturner(11.12, 100));
-
-const btn = document.querySelector("button")
-
-// const pA = document.querySelector(".pAmount")
-// const pV = document.querySelector(".pValue")
-
-// btn.addEventListener("click", (selector) => {
-
-//     document.getElementById("result").innerHTML = moneyReturner(pA.innerHTML=prompt("Total purchased amount:"), pV.innerHTML=prompt("Paid amount:"));
-
-// })
-
-const tableData = document.querySelectorAll("td")
-
-// console.log(tableData);
-
+console.log(moneyReturner(11.12, 100));
 
 const pA = document.querySelector(".pAmount")
-tableData.forEach(e => {
-    e.addEventListener("click", () => {
 
-        if (e.innerText != 'clear' && e.innerText !=="tab>") {
-            document.querySelector(".pAmount").innerHTML += e.innerText;
-            document.querySelector(".pValue").innerHTML += e.innerText;
+const pV = document.querySelector(".pValue")
+
+const rS = document.querySelector("body button")
+
+const result = document.querySelector("#result")
 
 
-        } else if(e.innerText =="tab>"){
-            document.querySelector(".pAmount").replaceWith
-        } else {
-            document.querySelector(".pAmount").innerHTML = ""
-            document.querySelector(".pValue").innerHTML = ""
-        }
+console.log(rS);
 
-        console.log(moneyReturner(document.querySelector(".pAmount").innerHTML, document.querySelector(".pValue").innerHTML));
-    })
+rS.addEventListener("click", () => {
+    result.innerHTML = moneyReturner(pA.value, pV.value)
 })
-
-/////////////////////////////////
-
-// tableData.forEach(e => {
-//     e.addEventListener("click", () => {
-
-//         if (e.innerText != 'clear' && e.innerText != '9') {
-//             document.querySelector(".pAmount").innerHTML += e.innerText;
-
-//         } else if (e.innerText == "9") {
-//             document.querySelector(".pValue").innerHTML += e.innerText;
-
-//         } else {
-//             document.querySelector(".pAmount").innerHTML = ""
-//             document.querySelector(".pValue").innerHTML = ""
-
-
-//         }
-
-//         console.log(moneyReturner(document.querySelector(".pAmount").innerHTML, document.querySelector(".pValue").innerHTML));
-//     })
-// })
-
 
 
 ///////////////////////////////

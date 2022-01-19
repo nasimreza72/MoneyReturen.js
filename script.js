@@ -17,12 +17,14 @@ function moneyReturner(purchased, paid) {
     for (key in obj) {
 
         if (obj[key] >= 1) {
-            final += `${obj[key]}*${key}, `
+            final += `${obj[key]}=> ${key} , ` 
         }
     }
     return final;
 }
 console.log(moneyReturner(11.12, 100));
+
+const table = document.querySelector("table")
 
 const pA = document.querySelector(".pAmount")
 
@@ -31,6 +33,7 @@ const pV = document.querySelector(".pValue")
 const rS = document.querySelector("body button")
 
 const result = document.querySelector("#result")
+result.style.color = ""
 
 
 console.log(rS);
@@ -38,6 +41,26 @@ console.log(rS);
 rS.addEventListener("click", () => {
     result.innerHTML = moneyReturner(pA.value, pV.value)
 })
+
+pA.addEventListener("click", ()=>{
+
+
+    table.addEventListener("click", (e)=>{
+        console.log(e.target.innerHTML);
+      pA.innerHTML += e.target.innerHTML;
+   })
+
+})
+
+pV.addEventListener("click", ()=>{
+
+    table.addEventListener("click", (ee)=>{
+        console.log(ee.target.innerHTML);
+      pV.innerHTML += ee.target.innerHTML;
+   })
+
+})
+
 
 
 ///////////////////////////////

@@ -17,7 +17,7 @@ function moneyReturner(purchased, paid) {
     for (key in obj) {
 
         if (obj[key] >= 1) {
-            final += `${obj[key]}=> ${key} , ` 
+            final += `${obj[key]}=> ${key} , `
         }
     }
     return final;
@@ -42,24 +42,32 @@ rS.addEventListener("click", () => {
     result.innerHTML = moneyReturner(pA.value, pV.value)
 })
 
-pA.addEventListener("click", ()=>{
+let active = "";
+
+table.addEventListener("click", (e) => {
+    if (active == 'input1')
+    pA.innerHTML += e.target.innerHTML;
+    else if (active == 'input2')
+    pV.innerHTML += e.target.innerHTML;
+    })
 
 
-    table.addEventListener("click", (e)=>{
+
+pA.addEventListener("click", (e) => {
+    active = 'input1';
         console.log(e.target.innerHTML);
-      pA.innerHTML += e.target.innerHTML;
-   })
+       
+    })
 
-})
 
-pV.addEventListener("click", ()=>{
 
-    table.addEventListener("click", (ee)=>{
+pV.addEventListener("click", (ee) => {
+    active = 'input2'
         console.log(ee.target.innerHTML);
-      pV.innerHTML += ee.target.innerHTML;
-   })
+      
+    })
 
-})
+
 
 
 

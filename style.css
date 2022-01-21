@@ -32,8 +32,6 @@ h1 {
     align-items: center;
     justify-content: center;
     color: white;
-    transform: rotate(5.75deg);
-
 }
 
 .container::after {
@@ -162,4 +160,8 @@ button:hover {
     background: rgb(3, 50, 112);
 
 
+}
+
+.pAmount:focus{
+    background-color: chartreuse;
 }

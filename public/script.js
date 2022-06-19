@@ -38,38 +38,41 @@ function moneyReturner(purchased, paid) {
   }
   return final;
 }
+
 console.log(moneyReturner(11.12, 100));
 
 const table = document.querySelector("table");
 
-const pA = document.querySelector(".pAmount");
+const purchasedAmount = document.querySelector(".purchasedAmount");
 
-const pV = document.querySelector(".pValue");
+const purchasedValue = document.querySelector(".purchasedValue");
 
-const rS = document.querySelector("body button");
+const showResultButton = document.querySelector(".showResultButton");
 
 const result = document.querySelector("#result");
 result.style.color = "";
 
-console.log(rS);
-
-rS.addEventListener("click", () => {
-  result.innerHTML = moneyReturner(pA.value, pV.value);
+showResultButton.addEventListener("click", () => {
+  result.innerHTML = moneyReturner(
+    purchasedAmount.value,
+    purchasedValue.value
+  );
 });
 
 let active = "";
 
 table.addEventListener("click", (e) => {
-  if (active == "input1") pA.innerHTML += e.target.innerHTML;
-  else if (active == "input2") pV.innerHTML += e.target.innerHTML;
+  if (active == "input1") purchasedAmount.innerHTML += e.target.innerHTML;
+  else if (active == "input2")
+    purchasedValue.innerHTML += e.target.innerHTML;
 });
 
-pA.addEventListener("click", (e) => {
+purchasedAmount.addEventListener("click", (e) => {
   active = "input1";
   console.log(e.target.innerHTML);
 });
 
-pV.addEventListener("click", (ee) => {
+purchasedValue.addEventListener("click", (ee) => {
   active = "input2";
   console.log(ee.target.innerHTML);
 });

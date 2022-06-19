@@ -13,9 +13,9 @@
 
     <h1>Money Returner</h1>
 
-    <div class="container"></div>
-    <div class="container1">
-        <p id="result"></p>
+
+    <div class="wrapper">
+        <div id="result"></div>
         <table>
             <thead>
                 <td>+</td>
@@ -38,24 +38,27 @@
                     <td>8</td>
                     <td>9</td>
                 </tr>
-                <tfoot>
-                    <td>#</td>
-                    <td>0</td>
-                    <td>.</td> 
-                </tfoot>
+            <tfoot>
+                <td>#</td>
+                <td>0</td>
+                <td>.</td>
+            </tfoot>
             </tbody>
-            
+
         </table>
     </div>
 
-    <div class="input">
-<h2 class="pA2"></h2>
-  
-    <p>Total purchased amount: <textarea name="" class="pAmount" cols="10" rows="1"></textarea></p>
+    <div class="inputField">
 
-    <p>Paid amount: <textarea name="" class="pValue" cols="10" rows="1"></textarea></p>
-    
-    <button>Result</button>
+        <div>Total purchased amount:
+            <textarea class="purchasedAmount"></textarea>
+        </div>
+
+        <div>Paid amount:
+            <textarea class="purchasedValue"></textarea>
+        </div>
+
+        <button class="showResultButton">Result</button>
 
     </div>
 
